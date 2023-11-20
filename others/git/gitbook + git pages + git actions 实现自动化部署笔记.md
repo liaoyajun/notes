@@ -155,12 +155,16 @@
 
 ## git pages 部分
 
-- 创建公开仓库，如 notes ，提交一次代码，创建 `gh-pages` 分支
+- 创建公开仓库，如 notes
 
 - 设置 actions 权限，仓库 - Settings - Actions - General [地址](https://github.com/liaoyajun/notes/settings/actions)
     - `Fork pull request workflows from outside collaborators` 设置为 `Require approval for first-time contributors who are new to GitHub`
     - `Workflow permissions` 设置为 `Read and write permissions` ，并勾选 `Allow GitHub Actions to create and approve pull requests`
 
+- 提交一次代码
+
 - 设置 github pages，仓库 - Settings - Pages
     - `Source` 选择 `Deploy from a branch`
     - `Branch` 选择 `gh-pages`
+
+- 保存之后,会执行 `pages build and deployment` Actions,执行完成之后,即可[访问](https://liaoyajun.github.io/notes/)
