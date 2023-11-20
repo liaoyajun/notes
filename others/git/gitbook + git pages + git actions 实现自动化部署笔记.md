@@ -2,7 +2,7 @@
 
 ## gitbook 部分
 
-- 切换 node 版本到 node/12.16.3 ，太新的不支持
+- 切换 node 版本到 node/12.16.3 ，最新的不支持
     ```bash
     sudo n i 12.16.3
     ```
