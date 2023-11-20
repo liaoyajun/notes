@@ -27,7 +27,7 @@
             * [基础](front-end/basic/README.md)
                 * [html](front-end/basic/html/README.md)
                 * [css](front-end/basic/css/README.md)
-                * [jss](front-end/basic/jss/README.md)
+                * [js](front-end/basic/js/README.md)
         * [后端](back-end/README.md)
         * [其他](others/README.md)
             * [git](others/git/README.md)
