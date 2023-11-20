@@ -50,6 +50,10 @@
     .pull-right.js-toolbar-action {
         display: none !important;
     }
+    /*隐藏上一页下一页*/
+    .navigation {
+        display: none !important;
+    }
     ```
 
 - 配置插件
