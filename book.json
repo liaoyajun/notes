@@ -1,0 +1,39 @@
+{
+  "title": "notes",
+  "styles": {
+    "website": "styles/customize.css"
+  },
+  "plugins" : [
+    "anchor-navigation-ex",
+    "code",
+    "editlink",
+    "expandable-chapters-small",
+    "page-footer-ex",
+    "prism",
+    "-highlight",
+    "search-pro",
+    "-search",
+    "-lunr",
+    "splitter"
+  ],
+  "pluginsConfig": {
+    "code": {
+        "copyButtons": true
+    },
+    "editlink": {
+      "base": "https://github.com/liaoyajun/notes/tree/main/",
+      "label": "Edit This Page"
+    },
+    "page-footer-ex": {
+      "copyright": "[liaoyajun](https://github.com/liaoyajun)",
+      "markdown": true,
+      "update_label": "<i>updated</i>",
+      "update_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "prism": {
+      "css": ["prismjs/themes/prism-okaidia.css"],
+      "lang": {"flow": "typescript"}
+    }
+  },
+  "ignores" : ["_book", "node_modules"]
+}
