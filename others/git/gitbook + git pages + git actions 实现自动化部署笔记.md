@@ -167,4 +167,4 @@
     - `Source` 选择 `Deploy from a branch`
     - `Branch` 选择 `gh-pages`
 
-- 保存之后,会执行 `pages build and deployment` Actions,执行完成之后,即可[访问](https://liaoyajun.github.io/notes/)
+- 保存之后，会执行 `pages build and deployment` Actions，执行完成之后，[即可访问](https://liaoyajun.github.io/notes/)
