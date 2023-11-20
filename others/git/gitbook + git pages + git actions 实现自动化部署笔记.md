@@ -65,17 +65,17 @@
         "website": "styles/customize.css"
       },
       "plugins" : [
-        "anchor-navigation-ex",
-        "code",
-        "editlink",
-        "expandable-chapters-small",
-        "page-footer-ex",
-        "prism",
+        "anchor-navigation-ex",  // 序号/悬浮目录/回到顶部
+        "code",  // 复制代码按钮
+        "editlink",  // 编辑按钮
+        "expandable-chapters-small",  // 折叠侧边栏菜单
+        "page-footer-ex",  // 定制每篇文章的页脚
+        "prism",  // 代码高亮
         "-highlight",
-        "search-pro",
+        "search-pro",  // 支持中文内容搜索
         "-search",
         "-lunr",
-        "splitter"
+        "splitter"  // 自由调节侧边栏的宽度
       ],
       "pluginsConfig": {
         "code": {
