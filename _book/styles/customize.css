@@ -1,9 +1,0 @@
-/*styles/customize.css*/
-/*隐藏 Published with GitBook*/
-.gitbook-link {
-    display: none !important;
-}
-/*隐藏右上角分享*/
-.pull-right.js-toolbar-action {
-    display: none !important;
-}

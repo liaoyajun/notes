@@ -4,7 +4,6 @@
     "website": "styles/customize.css"
   },
   "plugins" : [
-    "anchor-navigation-ex",
     "code",
     "editlink",
     "expandable-chapters-small",
