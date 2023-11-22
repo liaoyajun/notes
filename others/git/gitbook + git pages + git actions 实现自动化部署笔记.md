@@ -61,6 +61,11 @@
     // 新建文件book.json
     {
       "title": "notes",
+      "links": {
+        "sidebar": {
+          "github": "https://github.com/liaoyajun"
+        }
+      },
       "styles": {
         "website": "styles/customize.css"
       },
@@ -75,7 +80,8 @@
         "search-pro",  // 支持中文内容搜索
         "-search",
         "-lunr",
-        "splitter"  // 自由调节侧边栏的宽度
+        "splitter",  // 自由调节侧边栏的宽度
+        "-sharing"
       ],
       "pluginsConfig": {
         "code": {

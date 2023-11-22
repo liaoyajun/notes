@@ -1,5 +1,10 @@
 {
   "title": "notes",
+  "links": {
+    "sidebar": {
+      "github": "https://github.com/liaoyajun"
+    }
+  },
   "styles": {
     "website": "styles/customize.css"
   },
@@ -13,7 +18,8 @@
     "search-pro",
     "-search",
     "-lunr",
-    "splitter"
+    "splitter",
+    "-sharing"
   ],
   "pluginsConfig": {
     "code": {
