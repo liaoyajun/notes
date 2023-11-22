@@ -3,10 +3,6 @@
 .gitbook-link {
     display: none !important;
 }
-/*隐藏右上角分享*/
-.pull-right.js-toolbar-action {
-    display: none !important;
-}
 /*隐藏上一页下一页*/
 .navigation {
     display: none !important;
