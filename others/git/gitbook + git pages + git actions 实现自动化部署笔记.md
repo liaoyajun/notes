@@ -123,7 +123,7 @@
 ## git actions 部分
 
 - 创建 yml 文件
-    ```yml
+    ```yaml
     # .github/workflows/gitbook.yml
     name: GitBook Deploy
 
@@ -141,7 +141,7 @@
             with:
               node-version: '12.16.3'
 
-          - name: Log env
+          - name: Log Env
             run: node -v
 
           - name: Checkout
@@ -178,3 +178,20 @@
     - `Branch` 选择 `gh-pages`
 
 - 保存之后，会执行 `pages build and deployment` Actions，执行完成之后，[即可访问](https://liaoyajun.github.io/notes/)
+
+## 常见问题
+
+- 报错
+    ```bash
+    Failed to load prism syntax: yml
+    ```
+
+    - 解决办法：代码块类型声明错误导致无法解析，将 `yml` 改成 `yaml` 即可
+
+- 警告
+    ```bash
+    warn: "options" property is deprecated, use config.get(key) instead
+    warn: "options.generator" property is deprecated, use "output.name" instead
+    ```
+
+    - 解决办法：打开文件 `.node_modules/gitbook-plugin-prism/index.js` ，将 `(book.options && book.options.generator)` 修改为 `(/^2+\.\d+\.\d+$/.test(book.gitbook.version))`
