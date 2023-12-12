@@ -207,7 +207,39 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../">
+        <li class="chapter " data-level="1.4" data-path="../../server/">
+            
+                <a href="../../server/">
+            
+                    
+                    服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../server/Ubuntu 使用技巧.html">
+            
+                <a href="../../server/Ubuntu 使用技巧.html">
+            
+                    
+                    Ubuntu 使用技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
             
                 <a href="../">
             
@@ -221,7 +253,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="./">
+        <li class="chapter " data-level="1.5.1" data-path="./">
             
                 <a href="./">
             
@@ -235,7 +267,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1.1" data-path="gitbook + git pages + git actions 实现自动化部署笔记.html">
+        <li class="chapter active" data-level="1.5.1.1" data-path="gitbook + git pages + git actions 实现自动化部署笔记.html">
             
                 <a href="gitbook + git pages + git actions 实现自动化部署笔记.html">
             
@@ -421,43 +453,43 @@
 <h2 id="git-actions-&#x90E8;&#x5206;">git actions &#x90E8;&#x5206;</h2>
 <ul>
 <li><p>&#x521B;&#x5EFA; yml &#x6587;&#x4EF6;</p>
-<pre class="language-"><code class="lang-yml">  # .github/workflows/gitbook.yml
-  name: GitBook Deploy
+<pre class="language-"><code class="lang-yaml">  <span class="token comment"># .github/workflows/gitbook.yml</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> GitBook Deploy
 
-  on:
-    push:
-      branches: [ &quot;main&quot; ]
+  <span class="token key atrule">on</span><span class="token punctuation">:</span>
+    <span class="token key atrule">push</span><span class="token punctuation">:</span>
+      <span class="token key atrule">branches</span><span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">&quot;main&quot;</span> <span class="token punctuation">]</span>
 
-  jobs:
-    build:
-      runs-on: ubuntu-latest
+  <span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span>
+      <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
 
-      steps:
-        - name: Setup Node.js
-          uses: actions/setup-node@v1
-          with:
-            node-version: &apos;12.16.3&apos;
+      <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Setup Node.js
+          <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v1
+          <span class="token key atrule">with</span><span class="token punctuation">:</span>
+            <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token string">&apos;12.16.3&apos;</span>
 
-        - name: Log env
-          run: node -v
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Log Env
+          <span class="token key atrule">run</span><span class="token punctuation">:</span> node <span class="token punctuation">-</span>v
 
-        - name: Checkout
-          uses: actions/checkout@v3
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout
+          <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v3
 
-        - name: Install GitBook CLI
-          run: npm install gitbook-cli -g
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install GitBook CLI
+          <span class="token key atrule">run</span><span class="token punctuation">:</span> npm install gitbook<span class="token punctuation">-</span>cli <span class="token punctuation">-</span>g
 
-        - name: Install GitBook Plugins
-          run: gitbook install
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install GitBook Plugins
+          <span class="token key atrule">run</span><span class="token punctuation">:</span> gitbook install
 
-        - name: Build
-          run: gitbook build
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build
+          <span class="token key atrule">run</span><span class="token punctuation">:</span> gitbook build
 
-        - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@releases/v4
-          with:
-            branch: gh-pages
-            folder: _book
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy
+          <span class="token key atrule">uses</span><span class="token punctuation">:</span> JamesIves/github<span class="token punctuation">-</span>pages<span class="token punctuation">-</span>deploy<span class="token punctuation">-</span>action@releases/v4
+          <span class="token key atrule">with</span><span class="token punctuation">:</span>
+            <span class="token key atrule">branch</span><span class="token punctuation">:</span> gh<span class="token punctuation">-</span>pages
+            <span class="token key atrule">folder</span><span class="token punctuation">:</span> _book
 </code></pre>
 </li>
 </ul>
@@ -482,7 +514,25 @@
 <li><p>&#x4FDD;&#x5B58;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x6267;&#x884C; <code>pages build and deployment</code> Actions&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;<a href="https://liaoyajun.github.io/notes/" target="_blank">&#x5373;&#x53EF;&#x8BBF;&#x95EE;</a></p>
 </li>
 </ul>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/liaoyajun" target="_blank">liaoyajun</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2023-11-22 10:45:24 </span> </footer>
+<h2 id="&#x5E38;&#x89C1;&#x95EE;&#x9898;">&#x5E38;&#x89C1;&#x95EE;&#x9898;</h2>
+<ul>
+<li><p>&#x62A5;&#x9519;</p>
+<pre class="language-"><code class="lang-bash">  Failed to load prism syntax: yml
+</code></pre>
+<ul>
+<li>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x4EE3;&#x7801;&#x5757;&#x7C7B;&#x578B;&#x58F0;&#x660E;&#x9519;&#x8BEF;&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;&#x89E3;&#x6790;&#xFF0C;&#x5C06; <code>yml</code> &#x6539;&#x6210; <code>yaml</code> &#x5373;&#x53EF;</li>
+</ul>
+</li>
+<li><p>&#x8B66;&#x544A;</p>
+<pre class="language-"><code class="lang-bash">  warn: <span class="token string">&quot;options&quot;</span> property is deprecated, use config.get<span class="token punctuation">(</span>key<span class="token punctuation">)</span> instead
+  warn: <span class="token string">&quot;options.generator&quot;</span> property is deprecated, use <span class="token string">&quot;output.name&quot;</span> instead
+</code></pre>
+<ul>
+<li>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x6253;&#x5F00;&#x6587;&#x4EF6; <code>.node_modules/gitbook-plugin-prism/index.js</code> &#xFF0C;&#x5C06; <code>(book.options &amp;&amp; book.options.generator)</code> &#x4FEE;&#x6539;&#x4E3A; <code>(/^2+\.\d+\.\d+$/.test(book.gitbook.version))</code></li>
+</ul>
+</li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/liaoyajun" target="_blank">liaoyajun</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2023-12-12 10:14:33 </span> </footer>
                                 
                                 </section>
                             
@@ -521,7 +571,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"gitbook + git pages + git actions 实现自动化部署笔记","level":"1.4.1.1","depth":3,"previous":{"title":"git","level":"1.4.1","depth":2,"path":"others/git/README.md","ref":"others/git/README.md","articles":[{"title":"gitbook + git pages + git actions 实现自动化部署笔记","level":"1.4.1.1","depth":3,"path":"others/git/gitbook + git pages + git actions 实现自动化部署笔记.md","ref":"others/git/gitbook + git pages + git actions 实现自动化部署笔记.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["code","editlink","expandable-chapters-small","page-footer-ex","prism","-highlight","search-pro","-search","-lunr","splitter","-sharing"],"ignores":["_book","node_modules"],"styles":{"website":"styles/customize.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"flow":"typescript"}},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/liaoyajun/notes/tree/main/"},"page-footer-ex":{"copyright":"[liaoyajun](https://github.com/liaoyajun)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"notes","links":{"sidebar":{"github":"https://github.com/liaoyajun"}},"gitbook":"*"},"file":{"path":"others/git/gitbook + git pages + git actions 实现自动化部署笔记.md","mtime":"2023-11-22T10:45:24.430Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-22T10:45:57.531Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"gitbook + git pages + git actions 实现自动化部署笔记","level":"1.5.1.1","depth":3,"previous":{"title":"git","level":"1.5.1","depth":2,"path":"others/git/README.md","ref":"others/git/README.md","articles":[{"title":"gitbook + git pages + git actions 实现自动化部署笔记","level":"1.5.1.1","depth":3,"path":"others/git/gitbook + git pages + git actions 实现自动化部署笔记.md","ref":"others/git/gitbook + git pages + git actions 实现自动化部署笔记.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["code","editlink","expandable-chapters-small","page-footer-ex","prism","-highlight","search-pro","-search","-lunr","splitter","-sharing"],"ignores":["_book","node_modules"],"styles":{"website":"styles/customize.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"flow":"typescript"}},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/liaoyajun/notes/tree/main/"},"page-footer-ex":{"copyright":"[liaoyajun](https://github.com/liaoyajun)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"notes","links":{"sidebar":{"github":"https://github.com/liaoyajun"}},"gitbook":"*"},"file":{"path":"others/git/gitbook + git pages + git actions 实现自动化部署笔记.md","mtime":"2023-12-12T10:14:33.895Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-12T10:15:08.801Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
