@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>基础 · notes</title>
+        <title>express 基础 · notes</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="html/" />
+    <link rel="next" href="../../server/" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -119,9 +119,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../">
+        <li class="chapter " data-level="1.2" data-path="../../front-end/">
             
-                <a href="../">
+                <a href="../../front-end/">
             
                     
                     前端
@@ -133,9 +133,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="./">
+        <li class="chapter " data-level="1.2.1" data-path="../../front-end/basic/">
             
-                <a href="./">
+                <a href="../../front-end/basic/">
             
                     
                     基础
@@ -147,9 +147,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1.1" data-path="html/">
+        <li class="chapter " data-level="1.2.1.1" data-path="../../front-end/basic/html/">
             
-                <a href="html/">
+                <a href="../../front-end/basic/html/">
             
                     
                     html
@@ -160,9 +160,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.2" data-path="css/">
+        <li class="chapter " data-level="1.2.1.2" data-path="../../front-end/basic/css/">
             
-                <a href="css/">
+                <a href="../../front-end/basic/css/">
             
                     
                     css
@@ -173,9 +173,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.3" data-path="js/">
+        <li class="chapter " data-level="1.2.1.3" data-path="../../front-end/basic/js/">
             
-                <a href="js/">
+                <a href="../../front-end/basic/js/">
             
                     
                     js
@@ -196,9 +196,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../../back-end/">
+        <li class="chapter " data-level="1.3" data-path="../">
             
-                <a href="../../back-end/">
+                <a href="../">
             
                     
                     后端
@@ -210,9 +210,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../../back-end/express/">
+        <li class="chapter " data-level="1.3.1" data-path="./">
             
-                <a href="../../back-end/express/">
+                <a href="./">
             
                     
                     express
@@ -224,9 +224,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1.1" data-path="../../back-end/express/express 基础.html">
+        <li class="chapter active" data-level="1.3.1.1" data-path="express 基础.html">
             
-                <a href="../../back-end/express/express 基础.html">
+                <a href="express 基础.html">
             
                     
                     express 基础
@@ -360,7 +360,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >基础</a>
+        <a href="../.." >express 基础</a>
     </h1>
 </div>
 
@@ -375,7 +375,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x57FA;&#x7840;">&#x57FA;&#x7840;</h1>
+                                <h1 id="express-&#x57FA;&#x7840;">express &#x57FA;&#x7840;</h1>
+<ul>
+<li><p>&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;</p>
+<pre class="language-"><code class="lang-bash">  <span class="token comment"># entry point &#x4F7F;&#x7528; app.js</span>
+  <span class="token function">npm</span> init
+  <span class="token comment"># &#x5B89;&#x88C5;&#x4F9D;&#x8D56;</span>
+  <span class="token function">npm</span> <span class="token function">install</span> express
+</code></pre>
+</li>
+<li><p><code>app.js</code> &#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-javascript">  <span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;express&apos;</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">3000</span>
+
+  app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&apos;/&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">&apos;Hello World!&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Example app listening on port </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>&#x8FD0;&#x884C;</p>
+<pre class="language-"><code class="lang-bash">  <span class="token function">npm</span> init
+</code></pre>
+</li>
+</ul>
 <footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/liaoyajun" target="_blank">liaoyajun</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2023-12-13 11:51:54 </span> </footer>
                                 
                                 </section>
@@ -403,12 +430,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 前端">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: express">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="html/" class="navigation navigation-next " aria-label="Next page: html">
+                <a href="../../server/" class="navigation navigation-next " aria-label="Next page: 服务器">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -419,7 +446,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基础","level":"1.2.1","depth":2,"next":{"title":"html","level":"1.2.1.1","depth":3,"path":"front-end/basic/html/README.md","ref":"front-end/basic/html/README.md","articles":[]},"previous":{"title":"前端","level":"1.2","depth":1,"path":"front-end/README.md","ref":"front-end/README.md","articles":[{"title":"基础","level":"1.2.1","depth":2,"path":"front-end/basic/README.md","ref":"front-end/basic/README.md","articles":[{"title":"html","level":"1.2.1.1","depth":3,"path":"front-end/basic/html/README.md","ref":"front-end/basic/html/README.md","articles":[]},{"title":"css","level":"1.2.1.2","depth":3,"path":"front-end/basic/css/README.md","ref":"front-end/basic/css/README.md","articles":[]},{"title":"js","level":"1.2.1.3","depth":3,"path":"front-end/basic/js/README.md","ref":"front-end/basic/js/README.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["code","editlink","expandable-chapters-small","page-footer-ex","prism","-highlight","search-pro","-search","-lunr","splitter","-sharing"],"ignores":["_book","node_modules"],"styles":{"website":"styles/customize.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"flow":"typescript"}},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/liaoyajun/notes/tree/main/"},"page-footer-ex":{"copyright":"[liaoyajun](https://github.com/liaoyajun)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"notes","links":{"sidebar":{"github":"https://github.com/liaoyajun"}},"gitbook":"*"},"file":{"path":"front-end/basic/README.md","mtime":"2023-12-13T11:51:54.072Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-13T11:52:31.018Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"express 基础","level":"1.3.1.1","depth":3,"next":{"title":"服务器","level":"1.4","depth":1,"path":"server/README.md","ref":"server/README.md","articles":[{"title":"Ubuntu 使用技巧","level":"1.4.1","depth":2,"path":"server/Ubuntu 使用技巧.md","ref":"server/Ubuntu 使用技巧.md","articles":[]}]},"previous":{"title":"express","level":"1.3.1","depth":2,"path":"back-end/express/README.md","ref":"back-end/express/README.md","articles":[{"title":"express 基础","level":"1.3.1.1","depth":3,"path":"back-end/express/express 基础.md","ref":"back-end/express/express 基础.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["code","editlink","expandable-chapters-small","page-footer-ex","prism","-highlight","search-pro","-search","-lunr","splitter","-sharing"],"ignores":["_book","node_modules"],"styles":{"website":"styles/customize.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"flow":"typescript"}},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/liaoyajun/notes/tree/main/"},"page-footer-ex":{"copyright":"[liaoyajun](https://github.com/liaoyajun)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"notes","links":{"sidebar":{"github":"https://github.com/liaoyajun"}},"gitbook":"*"},"file":{"path":"back-end/express/express 基础.md","mtime":"2023-12-13T11:51:54.072Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-13T11:52:31.018Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
